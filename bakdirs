@@ -1,14 +1,14 @@
 /usr/local/bin
 /etc/hosts
 /root
-/home/djecha/RaspberryPi
-/home/djecha/Desktop
-/home/djecha/Downloads
-/home/djecha/Documents
-/home/djecha/Pictures
-/mnt/WIN/Users/dJose/Desktop
-/mnt/WIN/Users/dJose/Downloads
-/mnt/WIN/Users/dJose/Documents
-/mnt/WIN/Users/dJose/Pictures
-/mnt/WIN/Users/dJose/Music
-/mnt/WIN/Users/dJose/PROGRAMS
+/home/<username>/RaspberryPi
+/home/<username>/Desktop
+/home/<username>/Downloads
+/home/<username>/Documents
+/home/<username>/Pictures
+/mnt/WIN/Users/<Windows username>/Desktop
+/mnt/WIN/Users/<Windows username>/Downloads
+/mnt/WIN/Users/<Windows username>/Documents
+/mnt/WIN/Users/<Windows username>/Pictures
+/mnt/WIN/Users/<Windows username>/Music
+/mnt/WIN/Users/<Windows username>/PROGRAMS
