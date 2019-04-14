@@ -1,0 +1,35 @@
+#!/bin/bash
+############### bakup #########################
+: ' 1.0 : This script uses the rsync command to copy 
+    	  the directories in the "bakdirs" file to the 
+    	  backup destinations in "bakdst".
+	  
+	  > Uses bakmnt to mount the appropriate drives.
+	  > Replaces bakarc.
+'
+############### bakup body ####################
+
+SRCFILE=/usr/local/bin/bakdirs
+DSTFILE=/usr/local/bin/bakdst
+
+bakmnt remount
+for src in $(cat $SRCFILE)
+do
+    if [ -d $src ]
+    then
+	for dest in $(cat $DSTFILE)
+	do
+	    # if the external drives didn't mount
+	    # the directories won't be copied
+	    if [ -d $dest ]
+	    then
+		rsync -a --delete $src $dest
+		echo "$src to $dest: Success"
+	    else
+		echo "$src to $dest: Fail"
+	    fi
+	done
+    else
+	echo "$src: No such file or directory"
+    fi
+done

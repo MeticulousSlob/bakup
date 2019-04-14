@@ -1,0 +1,33 @@
+#!/bin/bash
+: ' 1.0 : This script will mount all partitions needed to run
+        a backup job on the user data contained by
+	JACK-Fedora and	JACK-WINDOWS. This includes
+	partitions containing data, and the partitions where
+	the backups are stored 
+	Sub-commands:
+	* umount  - unmounts all partitions
+	* mount   - mounts all partitions using paths defined
+	  	    in their respective scripts
+	* remount - unmounts all partitions then mounts them
+	  	    again to the paths defined in their
+		    respective scripts
+'
+
+
+if [ -z $1 ]; then
+	echo "What would you like me to do?";
+elif [ $1 = "umount" ]; then
+	sbp umount
+	linmb umount
+	win umount
+elif [ $1 = "mount" ]; then
+	sbp mount
+	linmb mount
+	win mount
+elif [ $1 = "remount" ]; then
+	sbp remount
+	linmb remount
+	win remount
+else
+	echo "What?"
+fi
