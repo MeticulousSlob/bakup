@@ -4,11 +4,7 @@
        file as defined by $LOG by custom made function
        writetolog. Replaces bakup.sh.
        Values of varibles are as follows:
-        * DATE --> the month and day at time of execution,
 	* LOG  --> file path to log file, uses DATE as title
-	* ARC  --> path to archive destination
-	* WDBAK--> path to offsite storage device 1
-	* SBBAK--> path to offsite storage device 2
 '
 
 ################# bakup.d interface ##############
